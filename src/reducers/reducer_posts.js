@@ -1,12 +1,12 @@
 import { FETCH_POSTS } from '../actions/index';
 
 // 초기값
-const INITIAL_STATE = { all : [] , post : null }; 
+const initial_state = { all : [] , post : null }; 
 
-export default function(state = INITIAL_STATE, action) {
+export default function(state = initial_state, action) {
     switch(action.type) {
         case FETCH_POSTS :
-        console.log(state , action.payload , action.payload.statusText);  
+        console.log(action.payload.data);  
         
         return { 
               ...state,
