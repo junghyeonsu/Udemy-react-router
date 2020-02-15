@@ -24,3 +24,15 @@
 <div>
   <img src="https://user-images.githubusercontent.com/54893898/74229461-c5fba500-4d05-11ea-9882-bc8966299de0.png" />
 </div>
+
+
+### 2월 16일 공부 (video 93 중간 ~ video 100)
+
++ 포스트 인덱스하기
++ 데이터가 로딩중일때 표시해주기
++ 액션 생성자 Delete, 그 후에 네비게이팅까지 
+
+최종 이미지
+<div>
+  <img src="https://user-images.githubusercontent.com/54893898/74591140-d048d680-5058-11ea-96e7-fed97a3ee06f.png" />
+</div>
