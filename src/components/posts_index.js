@@ -10,35 +10,31 @@ class PostsIndex extends Component {
         this.props.fetchPosts();
     }
 
+    renderPosts() {
+        return this.props.posts.map((post) => {
+            return (
+                <li className="list-group-item" key={post.id}>
+                    <Link to={"posts/" + post.id}>
+                       <span className="pull-xs-right">{post.categories}</span>
+                       <strong>{post.title}</strong>
+                    </Link>
+                </li>
+            )
+        })
+    }
+
     render() {
         return(
             <div>
-                <div>
-                    {this.props.posts.map((post) => {
-                        const id = post.id;
-                        const title = post.title;
-                        const categories = post.categories;
-                        const content = post.content;
-
-                        return (
-                            <div>
-                                <ul>
-                                    <li>{id}</li>
-                                    <li>{title}</li>
-                                    <li>{categories}</li>
-                                    <li>{content}</li>
-                                </ul>
-                            </div>
-                        );
-
-                        
-                    })}
-                </div>
                 <div className="text-xs-right">
                     <Link to="/posts/new" className="btn btn-primary">
                         새 포스트 만들기
                     </Link>
                 </div>
+                <h3>포스트들</h3>
+                <ul className="list-group">
+                    {this.renderPosts()}
+                </ul>
             </div>
         );
     }
